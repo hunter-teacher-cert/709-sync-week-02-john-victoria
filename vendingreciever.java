@@ -30,10 +30,10 @@ import java.util.*;
 public class vendingreciever {
 	public static void main(String[] args) {
 		double balance = 0; //machine's balance
-		Scanner in = new Scanner();
+		Scanner in = new Scanner(System.in);
 
-		System.out.println("Please enter a coin :>");
-		String coins = in.nextLine(); //get type from user
+		System.out.print("Please enter a coin :>");
+		String coins = in.nextLine().toUpperCase(); //get type from user
 
 
 		switch(coins) {
@@ -57,7 +57,7 @@ public class vendingreciever {
 			break;
 		}
 
-		System.out.printf("Your balance is %.2f", balance);
+		System.out.printf("Your balance is $%.2f", balance);
 
 	}
 
