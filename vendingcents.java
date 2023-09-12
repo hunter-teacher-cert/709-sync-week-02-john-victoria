@@ -6,8 +6,8 @@ This file takes command line argument of the number of cents and the program out
 
 public class vendingcents {
 	public static void main(String[] args) {
-		int balance = (int) args[0];
-
+		int balance = Integer.parseInt (args[0]);
+		System.out.println("hello " + balance);
 		int totalDollar = 0;
 		int totalHalf = 0;
 		int totalQuarter = 0;
@@ -16,32 +16,34 @@ public class vendingcents {
 		int totalPenny = 0;
 
 		//get dollar amount
-		totalDollar = balance % 100;
+		
+		totalDollar = balance / 100;
 		balance -= totalDollar*100;
 
 		//get half dollar amount
-		totalDollar = balance % 50;
-		balance -= totalDollar*50;
+		totalHalf = balance / 50;
+		balance -= totalHalf*50;
 
 		//get quarter amount
-		totalDollar = balance % 25;
-		balance -= totalDollar*25;
+		totalQuarter = balance / 25;
+		balance -= totalQuarter*25;
 
 		//get dime amount
-		totalDollar = balance % 10;
-		balance -= totalDollar*10;
+		totalDime = balance / 10;
+		balance -= totalDime*10;
 
 		//get nickel amount
-		totalDollar = balance % 5;
-		balance -= totalDollar*5;
+		totalNickel = balance / 5;
+		balance -= totalNickel*5;
 
 		//get penny amount
-		totalDollar = balance % 1;
-		balance -= totalDollar*1;
+		totalPenny = balance / 1;
+		balance -= totalPenny*1;
 
 		//output
+		//System.out.println("Test1");
 		System.out.println("You will have " + totalDollar + " golden dollar coins, " + totalHalf + " half dollar coins, " + totalQuarter + " quarters, " + totalDime + " dimes, " + totalNickel + " nickels, " + totalPenny + " pennies.");
-
+		//System.out.println("Test 2");
 
 	}
 }
