@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "4&#45;digit&#45;number",
+      "setup": "",
+      "run": "java mindstretch",
+      "input": "8675",
+      "output": "8675",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
